@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's play a game. Shall we? - Enter Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to your Proposal</h1>
+        <p>Please enter your name to begin:</p>
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+        <button onclick="checkName()">Start</button>
+        <p id="error-message"></p>
+
+        <div class="game-rules">
+            <h3>Game Rules:</h3>
+            <ul>
+                <li>Please input all the answers in <strong>small caps</strong>.</li>
+                <li>To actually enjoy this game, <strong>please do not cheat</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

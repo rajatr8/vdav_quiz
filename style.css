@@ -1,0 +1,175 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* light pink background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative; /* Make the body the reference point for absolute positioning */
+}
+
+/* Container holding the game content */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    position: relative; /* For positioning the content */
+    z-index: 1; /* Make sure the content stays above emojis */
+}
+
+/* Heading styling */
+h1 {
+    color: #e63946; /* red */
+}
+
+/* Password input field styling */
+input {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #e63946;
+    font-size: 16px;
+    width: 80%;
+}
+
+/* Button styling */
+button {
+    background-color: #e63946; /* red button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Error message display */
+#error-message {
+    margin-top: 20px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* Hint button styling (rabbit emoji) */
+.hint-button {
+    font-size: 80px; /* Size of the emoji */
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Move the rabbit emoji to the bottom-right corner */
+    z-index: 2; /* Ensure it stays above other emojis */
+    transition: transform 0.3s ease-in-out;
+    animation: floatHint 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Rotate the hint button on hover */
+.hint-button:hover {
+    transform: rotate(360deg); 
+}
+
+/* Hint message styling */
+#hint-message {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    display: none; /* Hide the hint initially */
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Emojis positioned in the four corners */
+.corner-emoji {
+    font-size: 80px; /* Size of the emojis */
+    position: absolute;
+    z-index: 1; /* Ensure emojis are behind the content */
+    animation: float 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+#heartEmoji {
+    top: 10px;
+    left: 10px;
+}
+
+#chocolateEmoji {
+    top: 10px;
+    right: 10px;
+}
+
+#roseEmoji {
+    bottom: 10px;
+    left: 10px; /* Keep the rose emoji in the bottom-left corner */
+}
+
+#hintBtnEmoji {
+    bottom: 10px;
+    right: 10px; /* Move the rabbit emoji to the bottom-right corner */
+    z-index: 2; /* Ensure the hint button stays on top of the other emojis */
+}
+
+
+/* Styling for the game rules section */
+.game-rules {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fce4ec;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.game-rules h3 {
+    color: #e63946; /* Red for the heading */
+}
+
+.game-rules ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.game-rules li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.game-rules li strong {
+    color: #e63946; /* Red for important text */
+}
+
+
+/* Animation for floating */
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(15px, -15px) rotate(30deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* Special animation for the hint button (rabbit emoji) */
+@keyframes floatHint {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(-15px, 15px) rotate(-15deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
